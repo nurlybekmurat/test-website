@@ -1,0 +1,116 @@
+.hero {
+  background-image: url('../images/hero-banner.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 203px 0 202px;
+  @media (max-width: 768px) {
+    background-position: right;
+  }
+  @media (max-width: 576px) {
+    padding: 203px 0 102px;
+  }
+  @media (max-width: 375px) {
+    padding: 150px 0 60px;
+  }
+
+  &__info {
+    @media (max-width: 768px) {
+      background-color: #ffffffca;
+      padding: 8px;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+    }
+  }
+
+  &__title {
+    max-width: 780px;
+    margin-bottom: 80px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-size: #{'clamp(1.5rem, 1.2rem + 1.5vw, 3rem)'};
+    line-height: 1.2;
+    color: #000;
+    @media (max-width: 576px) {
+      margin-bottom: 40px;
+    }
+  }
+  &__title--accent {
+    color: $blueLight;
+  }
+
+  &__text {
+    max-width: 534px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.125rem;
+    font-size: #{'clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem)'};
+    line-height: 1.2;
+    color: #000;
+  }
+
+  &__list {
+    margin-bottom: 80px;
+    @media (max-width: 576px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 1.125rem;
+    font-size: #{'clamp(1.125rem, 1.05rem + 0.375vw, 1.5rem)'};
+    line-height: 1.2;
+    color: #000;
+  }
+
+  &__item::before {
+    content: "-";
+    margin-right: 10px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 30px;
+    @media (max-width: 375px) {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 183px;
+    padding: 15px 31px;
+    background-color: #fff;
+    border: 1px solid #6F6D7B;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #2A2B30;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+    @media (max-width: 375px) {
+      width: 100%;
+      max-width: unset;
+    }
+  }
+
+  &__btn--primary {
+    border: 1px solid #fff;
+    background-color: $blueLight;
+    color: #fff;
+  }
+}
+
+.hero__btn:hover {
+  background-color: $blueDark;
+  color: #fff;
+  border: 1px solid $blueDark;
+}

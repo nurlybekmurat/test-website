@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.main ul {
+  list-style: none;
+}
+
+.main a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1202px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+@import './colors.scss';
+@import './sections/header.scss';
+@import './sections/hero.scss';
+@import './sections/order.scss';
+@import './sections/form.scss';
+@import './sections/select.scss';
+@import './sections/footer.scss';
